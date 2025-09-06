@@ -1,4 +1,4 @@
-import { getUserByEmail } from "../services/user.service.js";
+import { getUserByEmail,createUser } from "../services/user.service.js";
 import { hashPasswordWithSalt } from "../utils/hash.js";
 import { createUserToken } from "../utils/token.js";
 import {
@@ -34,6 +34,9 @@ export const signupController = async function (req, res) {
     salt,
     password: hashedPassword,
   });
+  
+    return res.status(201).json({status:"Success"})
+
 };
 
 export const loginController = async function (req, res) {

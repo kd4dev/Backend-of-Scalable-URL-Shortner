@@ -14,17 +14,3 @@ router.get('/:shortcode',shortCodeTarget);
 
 export default router;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,11 +1,7 @@
 import "dotenv/config";
 import { validateUserToken } from "../utils/token.js";
 
-/**
- * @param{import("express").Request} req
- * @param{import("express").Response} res
- * @param{import("express").NextFunction} next
- */
+
 export function authenticationMiddleware(req, res, next) {
   const authHeader = req.headers["authorisation"];
   if (!authHeader) return next();
